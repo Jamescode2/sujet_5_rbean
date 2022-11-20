@@ -1,5 +1,5 @@
 window.onload = function () {
-    let total = parseInt(document.getElementById('total').textContent);
+    let total = parseFloat(document.getElementById('total').textContent);
 
     function checked(n) {
         let tr = document.querySelector('tr:nth-child(' + n + ')');
@@ -14,13 +14,13 @@ window.onload = function () {
                 total -= parseFloat(tr.lastElementChild.textContent.substring(1));
                 document.getElementById('total').innerHTML = total;
             }
-        })
+        });
     }
     checked(1);
     checked(2);
+    checked(3);
     checked(4);
     checked(5);
     checked(6);
-
 }
 
